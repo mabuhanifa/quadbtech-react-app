@@ -12,7 +12,7 @@ export default function Home() {
     get_data();
   }, []);
   return (
-    <div>
+    <div className="grid grid-cols-3 gap-4 p-5">
       {data && data.map((item) => <Show show={item} key={item.show.id} />)}
     </div>
   );
