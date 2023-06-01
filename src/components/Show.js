@@ -10,7 +10,7 @@ export default function Show({ show }) {
   return (
     <div className="shad p-3 rounded">
       <h1 className="">{name}</h1>
-      <img src={original} alt="main" className="w-96"/>
+      <img src={original} alt="main" className="w-40"/>
     </div>
   );
 }
