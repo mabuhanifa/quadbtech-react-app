@@ -12,8 +12,35 @@ export default function Home() {
     get_data();
   }, []);
   return (
-    <div className="grid grid-cols-3 gap-4 p-5">
-      {data && data.map((item) => <Show show={item} key={item.show.id} />)}
-    </div>
+    <>
+      <nav className="flex flex-col-reverse gap-y-5 shad rounded-lg py-3 px-5 lg:flex-row justify-around items-center">
+        <div className="">
+          <span className="font-bold">TV Maze</span>
+        </div>
+        <div className="flex flex-col gap-y-5 lg:flex-row items-center">
+          <div className="relative">
+            <input
+              type="text"
+              className="bg-gray-200 rounded-md py-2 w-96 px-10"
+              placeholder="Search"
+            />
+            <RiSearchLine className="text-gray-400 text-2xl absolute left-2 top-2" />
+          </div>
+        </div>
+        <div>
+          <button>
+            <CiUser className="text-2xl text-gray-600 mt-1.5" />
+          </button>
+        </div>
+      </nav>
+
+      
+
+
+
+      <div className="grid grid-cols-3 gap-4 p-5">
+        {data && data.map((item) => <Show show={item} key={item.show.id} />)}
+      </div>
+    </>
   );
 }
