@@ -4,15 +4,7 @@ import Nav from "./Nav";
 import Footer from "./Footer";
 
 export default function Home() {
-  useEffect(() => {
-    const fetchData = async () => {
-      const res = await fetch("http://localhost:3001/api");
-      const data = await res.json();
-      console.log(data);
-    };
-
-    fetchData();
-  }, []);
+ 
 
   return (
     <section className="bg-gray-900">
