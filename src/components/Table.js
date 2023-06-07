@@ -4,7 +4,7 @@ export default function Table() {
   const [data, setData] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch("http://localhost:3001/api/crypto");
+      const res = await fetch("https://crypto-o6vh.onrender.com/api/crypto");
       console.log(res);
       const data = await res.json();
       setData(data);
@@ -41,12 +41,12 @@ export default function Table() {
                       {item.info.buy} / {item.info.sell}{" "}
                     </td>
                     <td className="text-center py-4">
-                      {(Number(item.info.sell - item.info.open) / 100).toFixed(
+                     {(Number(item.info.sell - item.info.open) / 100).toFixed(
                         2
-                      )}
+                      )} %
                     </td>
                     <td className="text-center py-4 rax">
-                      {(item.info.sell - item.info.open).toFixed(2)}
+                    ₹ {(item.info.sell - item.info.open).toFixed(2)}
                     </td>
                   </tr>
                 );
