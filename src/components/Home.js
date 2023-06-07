@@ -1,16 +1,16 @@
-import React, { useEffect } from "react";
+import React from "react";
+import Footer from "./Footer";
 import Hero from "./Hero";
 import Nav from "./Nav";
-import Footer from "./Footer";
+import Table from "./Table";
 
 export default function Home() {
- 
-
   return (
     <section className="bg-gray-900">
       <Nav />
-      <Hero/>
-      <Footer/>
+      <Hero />
+      <Table />
+      <Footer />
     </section>
   );
 }
