@@ -13,8 +13,8 @@ export default function Home() {
   }, []);
 
   return (
-    <>
+    <section className="bg-gray-900">
       <Nav />
-    </>
+    </section>
   );
 }
