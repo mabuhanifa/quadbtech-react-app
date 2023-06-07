@@ -8,7 +8,7 @@ export default function Table() {
   if (loading) {
     return (
       <h1 className="text-center text-white font-bold text-2xl my-20">
-        Loading.... Please wait for 30 second for first load
+        Loading.... Please wait for 30 second for the first load
       </h1>
     );
   }
