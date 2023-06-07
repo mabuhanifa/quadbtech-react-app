@@ -1,24 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import useFetch from "../utils/useFetch";
 
 export default function Table() {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
-  useEffect(() => {
-    const fetchData = async () => {
-      setLoading(true);
-      const res = await fetch("https://crypto-o6vh.onrender.com/api/crypto");
-      console.log(res);
-      const data_ = await res.json();
-      setData(data_);
-      if (data_.length > 0) {
-        setLoading(false);
-      } else {
-        setError(true);
-      }
-    };
-    fetchData();
-  }, []);
+  const { data, loading, error } = useFetch(
+    "https://crypto-o6vh.onrender.com/api/crypto"
+  );
   if (loading) {
     return (
       <h1 className="text-center text-white font-bold text-2xl my-20">
