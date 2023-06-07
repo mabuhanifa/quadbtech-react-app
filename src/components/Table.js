@@ -4,7 +4,8 @@ export default function Table() {
   const [data, setData] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch("http://localhost:3001/api");
+      const res = await fetch("http://localhost:3001/api/crypto");
+      console.log(res);
       const data = await res.json();
       setData(data);
     };
@@ -26,7 +27,6 @@ export default function Table() {
               <th>Difference</th>
               <th>Savings</th>
             </tr>
-            <div className="my-3"></div>
             {data &&
               data.map((item, index) => {
                 return (
